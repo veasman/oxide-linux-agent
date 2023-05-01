@@ -55,7 +55,7 @@ fn handle_command(command: Command) {
             None => println!("Factors command without arg"),
         },
         Command::HealthCheck => println!("HealthCheck command"),
-        Command::Logs => println!("Logs command"),
+        Command::Logs => commands::logs::show_log_path(),
         Command::Reset => println!("Reset command"),
         Command::Settings { key, value } => {
             match (key, value) {
